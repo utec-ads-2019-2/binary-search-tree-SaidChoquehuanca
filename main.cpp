@@ -9,5 +9,6 @@ int main(int argc, char *argv[]) {
     cout << "===========================================================" << endl << endl;
 
     Tester::execute();
+    
     return EXIT_SUCCESS;
 }
