@@ -22,10 +22,13 @@ class BSTree {
 public:
     BSTree() : root(nullptr), nodes(0){};
 
+    // Debería ser privado
     Node<T>* remove( Node<T> *node, int data) {
         if (node == nullptr) {
             return nullptr;
         }
+
+        // Hay mucho código repetido que podrías mejorar
         if (data > node->data) {
             node->right = remove(node->right, data);
         } else if(data < node->data) {
@@ -78,6 +81,7 @@ public:
     }
 
     void insert(T data) {
+        // Solo aceptas repetidos pero siempre creas un nodo
         Node<T> * temp = new Node<T>(data);
         if (nodes != 0){
             Node<T> *ite = root;
@@ -201,6 +205,7 @@ public:
 
     }
     ~BSTree() {
+        // Así no es el constructor del árbol, solo estás liberando el root
         if(root != nullptr){
             delete root;
         }

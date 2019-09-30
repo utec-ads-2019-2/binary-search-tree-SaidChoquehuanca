@@ -8,7 +8,7 @@
 #include <algorithm>   
 
 #include "../mocker/mocker.h"
-    #include "bstree.h"
+#include "../bstree.h"
 
 using namespace std;
 
